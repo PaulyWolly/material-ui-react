@@ -12,15 +12,15 @@ import { makeStyles } from '@material-ui/core'
 const useStyles = makeStyles({
   // creatae classes and rules here
   btn: {
-    fontSize: 60,
-    backgoundColor: 'violet',
+    fontSize: 16,
+    backgoundColor: 'blue',
     float: 'left',
     '&:hover' : {
-      backgroundColor: 'red'
+      backgroundColor: 'darkBlue'
     }
   },
   title: {
-    textDecoration: 'underline',
+    //textDecoration: 'underline',
     marginBottom: '20px'
   }
 });

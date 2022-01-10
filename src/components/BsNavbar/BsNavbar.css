@@ -1,3 +1,9 @@
 a.brand.navbar-brand {
-  margin-left:24px
+  position: relative;
+  left: 20px;
+}
+div.collapse.navbar-collapse {
+  position: relative;
+  left: 9px;
+  bottom: 18px;
 }

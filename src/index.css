@@ -1,7 +1,11 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Comforter+Brush&family=Electrolize&family=Gloria+Hallelujah&family=Gluten:wght@100&family=Londrina+Solid:wght@300;400;900&family=Nanum+Pen+Script&family=Quicksand:wght@300;400;500;600;700&family=Shadows+Into+Light&family=Shalimar&family=Sigmar+One&family=Special+Elite&family=Ubuntu+Condensed&display=swap');
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.form-control {
+  float: left;
 }

@@ -1,3 +1,9 @@
 .submit-btn {
   float:left;
 }
+
+.form-control {
+  float: left;
+  width: 250px;
+  text-align: left;
+}

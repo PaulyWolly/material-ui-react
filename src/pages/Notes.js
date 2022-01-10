@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import './Notes.css'
 import * as MUI from '@material-ui/core'
 import NoteCard from '../components/NoteCard/NoteCard';
+import Masonry from 'react-masonry-css';
 
 export default function Notes() {
 
@@ -25,16 +26,26 @@ export default function Notes() {
     setNotes(newNotes)
   }
 
+  const breakpoints = {
+    default: 3,
+    1100: 2,
+    700: 1
+  }
+
   return (
     <MUI.Container className='notes'>
 
-      <MUI.Grid container spacing={3}>
+      <Masonry
+        breakpointCols={breakpoints}
+        className="my-masonry-grid"
+        columnClassName="my-masonry-grid_column"
+      >
         {notes.map(note => (
-          <MUI.Grid item key={note.id} xs={12} md={6} lg={4}>
-          <NoteCard note={note} handleDelete = {handleDelete}/>
-          </MUI.Grid>
+          <div item key={note.id} xs={12} md={6} lg={4}>
+            <NoteCard note={note} handleDelete = {handleDelete}/>
+          </div>
         ))}
-      </MUI.Grid>
+      </Masonry>
 
     </MUI.Container>
   )

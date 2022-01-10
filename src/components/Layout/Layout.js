@@ -37,6 +37,9 @@ const useStyles = makeStyles((theme) => {
     toolbar: theme.mixins.toolbar,
     date : {
       flexGrow: 1
+    },
+    avatar: {
+      marginLeft: theme.spacing(1)
     }
   }
 
@@ -76,7 +79,7 @@ export default function Layout({ children }) {
           <MUI.Typography>
             Mario
           </MUI.Typography>
-          <MUI.Avatar src="../../../public/mario-av.png" />
+          <MUI.Avatar src="/mario-av.png" className={classes.avatar}/>
         </MUI.Toolbar>
       </MUI.AppBar>
 

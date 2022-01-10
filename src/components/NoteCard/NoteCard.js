@@ -1,10 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react"
-import { styled } from '@mui/material/styles';
 import * as MUI from '@material-ui/core'
 import * as MIcon from '@material-ui/icons'
-import Avatar from '@mui/material/Avatar';
-import { red } from '@mui/material/colors';
+import { green, pink, yellow, blue, grey } from '@material-ui/core/colors'
+
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles({
@@ -23,6 +22,23 @@ const useStyles = makeStyles({
         return '2px solid blue'
       }
     }
+  },
+  avatar: {
+    backgroundColor: (note) => {
+      if (note.category === 'work') {
+        return yellow[700]
+      }
+      if (note.category === 'todos') {
+        return pink[500]
+      }
+      if (note.category === 'reminders' || note.category === 'reminder') {
+        return blue[500]
+      }
+      if (note.category === 'money') {
+        return green[500]
+      }
+      return grey[700]
+    }
   }
 })
 
@@ -34,11 +50,11 @@ export default function NoteCard({ note, handleDelete }) {
     <div>
      <MUI.Card elevation={3} className={classes.test}>
        <MUI.CardHeader
-          // avatar={
-          //   <Avatar sx={{ bgcolor: red[500] }} >
-          //     R
-          //   </Avatar>
-          // }
+          avatar={
+            <MUI.Avatar className={classes.avatar}>
+              {note.category[0].toUpperCase()}
+            </MUI.Avatar>
+          }
           action={
             <MUI.IconButton onClick={() => handleDelete(note.id)}>
               <MIcon.DeleteOutlined />

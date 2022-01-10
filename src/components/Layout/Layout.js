@@ -74,7 +74,7 @@ export default function Layout({ children }) {
       >
         <MUI.Toolbar>
           <MUI.Typography className={classes.date}>
-            Today is the {format(new Date(), 'do MMM Y')}
+            Today is the {format(new Date(), 'do')} day of {format(new Date(), 'MMM Y')}
           </MUI.Typography>
           <MUI.Typography>
             Mario
